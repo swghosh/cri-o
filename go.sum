@@ -3304,6 +3304,7 @@ google.golang.org/genproto v0.0.0-20220414192740-2d67ff6cf2b4/go.mod h1:8w6bsBMX
 google.golang.org/genproto v0.0.0-20220421151946-72621c1f0bd3/go.mod h1:8w6bsBMX6yCPbAVTeqQHvzxW0EIFigd5lZyahWgyfDo=
 google.golang.org/genproto v0.0.0-20220422154200-b37d22cd5731/go.mod h1:8w6bsBMX6yCPbAVTeqQHvzxW0EIFigd5lZyahWgyfDo=
 google.golang.org/genproto v0.0.0-20220429170224-98d788798c3e/go.mod h1:8w6bsBMX6yCPbAVTeqQHvzxW0EIFigd5lZyahWgyfDo=
+google.golang.org/genproto v0.0.0-20220502173005-c8bf987b8c21/go.mod h1:RAyBrSAP7Fh3Nc84ghnVLDPuV51xc9agzmm4Ph6i0Q4=
 google.golang.org/genproto v0.0.0-20220505152158-f39f71e6c8f3/go.mod h1:RAyBrSAP7Fh3Nc84ghnVLDPuV51xc9agzmm4Ph6i0Q4=
 google.golang.org/genproto v0.0.0-20220518221133-4f43b3371335/go.mod h1:RAyBrSAP7Fh3Nc84ghnVLDPuV51xc9agzmm4Ph6i0Q4=
 google.golang.org/genproto v0.0.0-20220523171625-347a074981d8/go.mod h1:RAyBrSAP7Fh3Nc84ghnVLDPuV51xc9agzmm4Ph6i0Q4=
@@ -3496,8 +3497,8 @@ k8s.io/kubernetes/staging/src/k8s.io/component-base v0.0.0-20220624161656-6219ee
 k8s.io/kubernetes/staging/src/k8s.io/component-helpers v0.0.0-20220624161656-6219eed24f3c h1:O2nOXP4wW0mhZq7B1G/kTUEzi3Uq20ZhmmoUdtw/nNg=
 k8s.io/kubernetes/staging/src/k8s.io/component-helpers v0.0.0-20220624161656-6219eed24f3c/go.mod h1:5WANCV0PyRjdd9Nj1TXMlShbRSlM/svPkkCtyFTaPxI=
 k8s.io/kubernetes/staging/src/k8s.io/controller-manager v0.0.0-20220624161656-6219eed24f3c/go.mod h1:fVOTDpRA4aPXHMPdD7dY7Nn5061OhlzSmV5806das10=
-k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220624161656-6219eed24f3c h1:MOTTL1WU0QpH8E5yH8We2JbPOrCtVysAShl6ZiOj4eM=
-k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220624161656-6219eed24f3c/go.mod h1:jV/d1vzo0k3dOIN4yD6rbS1QQRrIn3p9aLRtfP5zfeg=
+k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220802183113-668b2440c559 h1:IIDBhJDMOnQ+pE6CcJCjNageuaH/jeTeUwidE/WgE+s=
+k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220802183113-668b2440c559/go.mod h1:QFupPZVxpXJihSh+iBU0FNeJoa1fBmqgp7E0woLq4Xg=
 k8s.io/kubernetes/staging/src/k8s.io/csi-translation-lib v0.0.0-20220624161656-6219eed24f3c/go.mod h1:mxiygQPmgco2Emxv3rf8VpHhKhl2SGS9iC6Bxn524Qg=
 k8s.io/kubernetes/staging/src/k8s.io/kube-aggregator v0.0.0-20220624161656-6219eed24f3c/go.mod h1:spOtU/vGkbN9NDmbgUXL/3AMKgAvc3t+2Y/+bTjuwLo=
 k8s.io/kubernetes/staging/src/k8s.io/kube-controller-manager v0.0.0-20220624161656-6219eed24f3c/go.mod h1:RbH2T97oqXHG6rkh9wMqi1O2e8/LELTrlF/T1tyOtdo=

@@ -3071,7 +3071,7 @@ k8s.io/component-base/version
 # k8s.io/component-helpers v0.0.0 => k8s.io/kubernetes/staging/src/k8s.io/component-helpers v0.0.0-20220624161656-6219eed24f3c
 ## explicit; go 1.18
 k8s.io/component-helpers/node/util/sysctl
-# k8s.io/cri-api v0.24.1 => k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220624161656-6219eed24f3c
+# k8s.io/cri-api v0.24.1 => k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220802183113-668b2440c559
 ## explicit; go 1.18
 k8s.io/cri-api/pkg/apis/runtime/v1
 k8s.io/cri-api/pkg/apis/runtime/v1alpha2
@@ -3335,7 +3335,7 @@ sigs.k8s.io/zeitgeist/upstream
 # k8s.io/component-base => k8s.io/kubernetes/staging/src/k8s.io/component-base v0.0.0-20220624161656-6219eed24f3c
 # k8s.io/component-helpers => k8s.io/kubernetes/staging/src/k8s.io/component-helpers v0.0.0-20220624161656-6219eed24f3c
 # k8s.io/controller-manager => k8s.io/kubernetes/staging/src/k8s.io/controller-manager v0.0.0-20220624161656-6219eed24f3c
-# k8s.io/cri-api => k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220624161656-6219eed24f3c
+# k8s.io/cri-api => k8s.io/kubernetes/staging/src/k8s.io/cri-api v0.0.0-20220802183113-668b2440c559
 # k8s.io/csi-translation-lib => k8s.io/kubernetes/staging/src/k8s.io/csi-translation-lib v0.0.0-20220624161656-6219eed24f3c
 # k8s.io/kube-aggregator => k8s.io/kubernetes/staging/src/k8s.io/kube-aggregator v0.0.0-20220624161656-6219eed24f3c
 # k8s.io/kube-controller-manager => k8s.io/kubernetes/staging/src/k8s.io/kube-controller-manager v0.0.0-20220624161656-6219eed24f3c
