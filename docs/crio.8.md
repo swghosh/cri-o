@@ -45,6 +45,7 @@ crio
 [--enable-metrics]
 [--enable-profile-unix-socket]
 [--enable-tracing]
+[--evented-pleg]
 [--gid-mappings]=[value]
 [--global-auth-file]=[value]
 [--grpc-max-recv-msg-size]=[value]
@@ -211,6 +212,8 @@ crio [GLOBAL OPTIONS] command [COMMAND OPTIONS] [ARGUMENTS...]
 **--enable-profile-unix-socket**: Enable pprof profiler on crio unix domain socket
 
 **--enable-tracing**: Enable OpenTelemetry trace data exporting
+
+**--evented-pleg**: Enable CRI-O to generate the container pod-level events in order to optimize the performance of the Pod Lifecycle Event Generator (PLEG) module in Kubelet.
 
 **--gid-mappings**="": Specify the GID mappings to use for the user namespace (default: "")
 
