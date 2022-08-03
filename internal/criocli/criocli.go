@@ -368,7 +368,9 @@ func mergeConfig(config *libconfig.Config, ctx *cli.Context) error {
 	if ctx.IsSet("stats-collection-period") {
 		config.StatsCollectionPeriod = ctx.Int("stats-collection-period")
 	}
-
+	if ctx.IsSet("evented-pleg") {
+		config.EventedPLEG = ctx.Bool("evented-pleg")
+	}
 	return nil
 }
 
@@ -1011,6 +1013,11 @@ func getCrioFlags(defConf *libconfig.Config) []cli.Flag {
 			Value:   defConf.StatsCollectionPeriod,
 			Usage:   "The number of seconds between collecting pod and container stats. If set to 0, the stats are collected on-demand instead.",
 			EnvVars: []string{"CONTAINER_STATS_COLLECTION_PERIOD"},
+		},
+		&cli.BoolFlag{
+			Name:    "evented-pleg",
+			Usage:   fmt.Sprintf("If true, the crio starts sending the container events to the Kubelet (default: %v)", defConf.EventedPLEG),
+			EnvVars: []string{"EVENTED_PLEG"},
 		},
 	}
 }
