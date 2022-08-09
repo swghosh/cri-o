@@ -51,6 +51,11 @@ EOF
 drop_infra_ctr = false
 EOF
 
+    cat <<EOF >/etc/crio/crio.conf.d/40-evented-pleg.conf
+[crio.runtime]
+evented_pleg = true
+EOF
+
 }
 
 enable_selinux
