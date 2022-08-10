@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Commit to run upstream node e2e tests
-NODE_E2E_COMMIT=2c43fb8a34e1cf59266e2f9a903e9ce88bf4c8ef
+NODE_E2E_COMMIT=2f658471ea540b78c6181da7703d9367d0f8c348
 
 enable_selinux() {
     # Make sure SELinux is enabled

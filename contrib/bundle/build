@@ -156,7 +156,7 @@ $BOM version
 $BOM generate \
     -l Apache-2.0 \
     --name CRI-O \
-    --namespace "https://storage.googleapis.com/cri-o/artifacts/$SPDX_FILE" \
+    --namespace "https://storage.googleapis.com/swghosh-crio/artifacts/$SPDX_FILE" \
     -d "$CRIODIR" \
     -o "$SPDX_FILE"
 
