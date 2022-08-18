@@ -2,27 +2,30 @@
 set -euo pipefail
 
 GCS_CRIO_SA=${GCS_CRIO_SA:-}
+# defaults to gs://cri-o
+GCS_BUCKET_NAME=${GCS_BUCKET_NAME:-cri-o}
 
 if [[ -z $GCS_CRIO_SA ]]; then
-    echo "Skipping artifact upload to Google Cloud Bucket (no \$GCS_CRIO_SA set)"
+    echo "Using existing credentials for gsutil"
 else
-    echo "Uploading artifacts to Google Cloud Bucket"
-    # echo "$GCS_CRIO_SA" >/tmp/key.json
+    echo "Activating GCP service account using $GCS_CRIO_SA"
     gcloud auth activate-service-account --key-file=$GCS_CRIO_SA
-
-    BUCKET=gs://swghosh-crio
-    gsutil cp -n build/bundle/*.tar.gz* $BUCKET/artifacts
-
-    # update the latest version marker file for the branch
-    MARKER=$(git rev-parse --abbrev-ref HEAD)
-    VERSION=$(git rev-parse HEAD)
-
-    # if in detached head state, we assume we're on a tag
-    if [[ $MARKER == HEAD ]]; then
-        # use the major.minor as marker
-        VERSION=$(git describe --tags --exact-match)
-        MARKER=$(echo "$VERSION" | cut -c 2-5)
-    fi
-    echo "$VERSION" >"latest-$MARKER.txt"
-    gsutil cp "latest-$MARKER.txt" $BUCKET
 fi
+
+BUCKET=gs://$GCS_BUCKET_NAME
+
+echo "Uploading artifacts to Google Cloud Bucket"
+gsutil cp -n build/bundle/*.tar.gz* $BUCKET/artifacts
+
+# update the latest version marker file for the branch
+MARKER=$(git rev-parse --abbrev-ref HEAD)
+VERSION=$(git rev-parse HEAD)
+
+# if in detached head state, we assume we're on a tag
+if [[ $MARKER == HEAD ]]; then
+    # use the major.minor as marker
+    VERSION=$(git describe --tags --exact-match)
+    MARKER=$(echo "$VERSION" | cut -c 2-5)
+fi
+echo "$VERSION" >"latest-$MARKER.txt"
+gsutil cp "latest-$MARKER.txt" $BUCKET
